@@ -8,6 +8,6 @@
     --color-text-primary: 0 0 0;
     --color-text-secondary: 255 255 255;
 
-    @apply text-primary font-cairo;
+    @apply font-cairo text-primary;
   }
 }
