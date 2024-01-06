@@ -1,4 +1,15 @@
 {
+  "header": {
+    "home": "Home",
+    "prices": "Prices",
+    "contact-sales": "Contact Sales",
+    "track-your-order": "Track Order",
+    "login": "Login"
+  },
+  "tracking-input": {
+    "label": "Track order",
+    "placeholder": "Tracking number"
+  },
   "title": "Welcome!",
   "description": {
     "part1": "This is just a basic example of how to use i18next with typescript",

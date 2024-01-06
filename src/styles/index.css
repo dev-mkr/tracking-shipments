@@ -4,9 +4,8 @@
 
 @layer base {
   html {
-    --color-primary: 227 6 19;
-    --color-text-primary: 0 0 0;
-    --color-text-secondary: 255 255 255;
+    --color-main: 227 6 19;
+    --color-primary: 30 27 75;
 
     @apply font-cairo text-primary;
   }

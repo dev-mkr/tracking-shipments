@@ -1,4 +1,15 @@
 {
+  "header": {
+    "home": "الرئيسية",
+    "prices": "الاسعار",
+    "contact-sales": "كلم المبيعات",
+    "track-your-order": "تتبع شحنتك",
+    "login": "تسجيل الدخول"
+  },
+  "tracking-input": {
+    "label": "تتبع شحنتك",
+    "placeholder": "رقم التتبع"
+  },
   "title": "مرحبا",
   "description": {
     "part1": "مرحبا بكم في العالم الجديد",

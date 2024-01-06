@@ -6,17 +6,18 @@ export default {
       container: {
         center: true,
         padding: {
-          DEFAULT: "0.5rem",
-          sm: "1rem",
+          DEFAULT: "1.3rem",
           lg: "4rem",
+        },
+        screens: {
+          lg: "1300px",
         },
       },
       colors: {
-        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        main: "rgb(var(--color-main) / <alpha-value>)",
       },
       textColor: {
-        primary: "rgb(var(--color-text-primary) / <alpha-value>)",
-        secondary: "rgb(var(--color-text-secondary) / <alpha-value>)",
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
       },
       fontFamily: {
         cairo: ["Cairo", "sans-serif"],

@@ -5,7 +5,7 @@ export const GlobalLoadingSpinner = () => {
     <span className="absolute inset-0 flex items-center justify-center">
       <SvgIcon
         name="loading-circle"
-        className="h-10 w-10 animate-spin fill-primary text-gray-200"
+        className="h-10 w-10 animate-spin fill-main text-gray-200"
         alt="loading"
       />
     </span>
