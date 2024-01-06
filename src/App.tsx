@@ -1,5 +1,6 @@
 import { Suspense, useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import { GlobalLoadingSpinner } from "@/shared/GlobalLoadingSpinner";
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -14,7 +15,7 @@ function App() {
   }, [language]);
 
   return (
-    <Suspense fallback={<div>loading</div>}>
+    <Suspense fallback={<GlobalLoadingSpinner />}>
       <button onClick={handleChangeLanguage}>change</button>
       <div>{t("description.part1")}</div>
     </Suspense>
