@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    --color-primary: 227 6 19;
+    --color-text-primary: 0 0 0;
+    --color-text-secondary: 255 255 255;
+
+    @apply text-primary font-cairo;
+  }
+}
