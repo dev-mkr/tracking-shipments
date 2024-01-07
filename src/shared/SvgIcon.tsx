@@ -1,14 +1,12 @@
 interface SvgIconProps extends React.SVGAttributes<SVGElement> {
   name: string;
   prefix?: string;
-  color?: string;
   alt?: string;
 }
 
 export default function SvgIcon({
   name,
   prefix = "icon",
-  color = "currentColor",
   alt,
   ...props
 }: SvgIconProps) {
@@ -18,7 +16,7 @@ export default function SvgIcon({
     <>
       {alt && <span className="sr-only">{alt}</span>}
       <svg {...props} aria-hidden="true">
-        <use href={symbolId} fill={color} />
+        <use href={symbolId} />
       </svg>
     </>
   );

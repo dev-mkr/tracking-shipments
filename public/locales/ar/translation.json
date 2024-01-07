@@ -1,0 +1,41 @@
+{
+  "global": {
+    "something-went-wrong": "حدث خطأ ما"
+  },
+  "header": {
+    "home": "الرئيسية",
+    "prices": "الاسعار",
+    "contact-sales": "كلم المبيعات",
+    "track-your-order": "تتبع شحنتك",
+    "login": "تسجيل الدخول"
+  },
+  "tracking-input": {
+    "label": "تتبع شحنتك",
+    "placeholder": "رقم التتبع"
+  },
+  "shipment": {
+    "order-not-found": "لم يتم العثور على الطلب",
+    "tracking-number": "رقم الشحنة",
+    "last-update": "اخر تحديث",
+    "provider-name": "اسم التاجر",
+    "promised-delivery-date": "موعد التسليم خلال",
+    "status": {
+      "TICKET_CREATED": "تم انشاء الشحنة",
+      "PACKAGE_RECEIVED": "تم استلام الشحنة من التاجر",
+      "OUT_FOR_DELIVERY": "الشحنة خرجت للتسليم",
+      "DELIVERED": "تم التسليم",
+      "CANCELLED": "تم الغاء الشحنة",
+      "IN_TRANSIT": "الشحنة تنقل من مركز الى اخر",
+      "NOT_YET_SHIPPED": "لم يتم شحن الشحنة بعد",
+      "WAITING_FOR_CUSTOMER_ACTION": "في انتظار اجراء العميل"
+    },
+    "branch": "الفرع",
+    "date": "التاريخ",
+    "time": "الوقت",
+    "details": "التفاصيل",
+    "shipment-details": "تفاصيل الشحنة",
+    "delivery-address": "عنوان التسليم",
+    "is-there-any-problem": "هل هناك مشكلة في شحنتك؟",
+    "report-a-problem": "ابلاغ عن مشكلة"
+  }
+}
