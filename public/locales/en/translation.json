@@ -1,6 +1,7 @@
 {
   "global": {
-    "something-went-wrong": "Something went wrong"
+    "something-went-wrong": "Something went wrong",
+    "shipment-page-title": "Shipment Tracking"
   },
   "header": {
     "home": "Home",

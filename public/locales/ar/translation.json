@@ -1,6 +1,7 @@
 {
   "global": {
-    "something-went-wrong": "حدث خطأ ما"
+    "something-went-wrong": "حدث خطأ ما",
+    "shipment-page-title": "تتبع شحنتك"
   },
   "header": {
     "home": "الرئيسية",
