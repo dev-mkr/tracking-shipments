@@ -9,7 +9,7 @@ interface Props {
 export const ShipmentLogs = ({ logs }: Props) => {
   const { t } = useTranslation();
   return (
-    <div className="flex-1">
+    <div className="flex-1 md:basis-3/4">
       <h4 className="mb-4">{t("shipment.shipment-details")}</h4>
       <div className="overflow-x-scroll rounded-lg border">
         <table className="w-full  text-left text-sm text-primary rtl:text-right">
