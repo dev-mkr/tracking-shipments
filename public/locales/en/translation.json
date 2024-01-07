@@ -1,4 +1,7 @@
 {
+  "global": {
+    "something-went-wrong": "Something went wrong"
+  },
   "header": {
     "home": "Home",
     "prices": "Prices",
@@ -10,10 +13,29 @@
     "label": "Track order",
     "placeholder": "Tracking number"
   },
-  "title": "Welcome!",
-  "description": {
-    "part1": "This is just a basic example of how to use i18next with typescript",
-    "part2": "😉"
-  },
-  "inter": "interpolated {{val}}"
+  "shipment": {
+    "order-not-found": "Order not found",
+    "tracking-number": "Shipment Number",
+    "last-update": "Last Update",
+    "provider-name": "Provider Name",
+    "promised-delivery-date": "Promised Delivery",
+    "status": {
+      "TICKET_CREATED": "Shipment created",
+      "PACKAGE_RECEIVED": "Package received from provider",
+      "OUT_FOR_DELIVERY": "Out for delivery",
+      "DELIVERED": "Delivered",
+      "CANCELLED": "Shipment cancelled",
+      "IN_TRANSIT": "Shipment in transit",
+      "NOT_YET_SHIPPED": "Shipment not yet shipped",
+      "WAITING_FOR_CUSTOMER_ACTION": "Waiting for customer action"
+    },
+    "branch": "Branch",
+    "date": "Date",
+    "time": "Time",
+    "details": "Details",
+    "shipment-details": "Shipment Details",
+    "delivery-address": "Delivery Address",
+    "is-there-any-problem": "Is there any problem in your shipment?",
+    "report-a-problem": "Report a problem"
+  }
 }
