@@ -54,7 +54,8 @@ export const ShipmentDetails = ({
             "text-green-400": currentStatus === ShipmentStatues.DELIVERED,
             "text-main": currentStatus === ShipmentStatues.CANCELLED,
             "text-yellow-300":
-              currentStatus === ShipmentStatues.WAITING_FOR_CUSTOMER_ACTION,
+              currentStatus === ShipmentStatues.WAITING_FOR_CUSTOMER_ACTION ||
+              currentStatus === ShipmentStatues.DELIVERED_TO_SENDER,
           })}
         >
           {t(`shipment.status.${currentStatus}`, "")}

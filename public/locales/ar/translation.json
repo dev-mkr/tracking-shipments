@@ -28,7 +28,8 @@
       "CANCELLED": "تم الغاء الشحنة",
       "IN_TRANSIT": "الشحنة تنقل من مركز الى اخر",
       "NOT_YET_SHIPPED": "لم يتم شحن الشحنة بعد",
-      "WAITING_FOR_CUSTOMER_ACTION": "في انتظار اجراء العميل"
+      "WAITING_FOR_CUSTOMER_ACTION": "في انتظار اجراء العميل",
+      "DELIVERED_TO_SENDER": "تم التسليم للتاجر"
     },
     "branch": "الفرع",
     "date": "التاريخ",

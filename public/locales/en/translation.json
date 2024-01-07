@@ -28,7 +28,8 @@
       "CANCELLED": "Shipment cancelled",
       "IN_TRANSIT": "Shipment in transit",
       "NOT_YET_SHIPPED": "Shipment not yet shipped",
-      "WAITING_FOR_CUSTOMER_ACTION": "Waiting for customer action"
+      "WAITING_FOR_CUSTOMER_ACTION": "Waiting for customer action",
+      "DELIVERED_TO_SENDER": "Delivered to sender"
     },
     "branch": "Branch",
     "date": "Date",

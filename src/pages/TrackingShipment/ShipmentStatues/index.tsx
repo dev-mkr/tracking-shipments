@@ -19,6 +19,7 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
   const isWaitingForCustomerAction =
     statues === ShipmentStatues.WAITING_FOR_CUSTOMER_ACTION;
   const isDelivered = statues === ShipmentStatues.DELIVERED;
+  const isDeliveredToSender = statues === ShipmentStatues.DELIVERED_TO_SENDER;
 
   if (isDelivered) {
     return (
@@ -85,14 +86,14 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
           className={cn("flex-1  max-sm:w-1 md:h-1", {
             "bg-green-400": isShipmentReceived || isOutForDelivery,
             "bg-main": isCanceled,
-            "bg-yellow-300": isWaitingForCustomerAction,
+            "bg-yellow-300": isWaitingForCustomerAction || isDeliveredToSender,
           })}
         />
         <span
           className={cn("flex-1  max-sm:w-1 md:h-1", {
             "bg-green-400": isOutForDelivery,
             "bg-main": isCanceled,
-            "bg-yellow-300": isWaitingForCustomerAction,
+            "bg-yellow-300": isWaitingForCustomerAction || isDeliveredToSender,
           })}
         />
         <span className="flex-1  max-sm:w-1 md:h-1" />
@@ -106,7 +107,8 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
                 "bg-green-400":
                   isTicketCreated || isShipmentReceived || isOutForDelivery,
                 "bg-main": isCanceled,
-                "bg-yellow-300": isWaitingForCustomerAction,
+                "bg-yellow-300":
+                  isWaitingForCustomerAction || isDeliveredToSender,
               }
             )}
           >
@@ -116,6 +118,7 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
             {t("shipment.status.TICKET_CREATED")}
           </p>
         </div>
+
         <div className="flex flex-1 gap-x-6 gap-y-5 max-sm:items-center md:-me-5 md:flex-col">
           <div
             className={cn(
@@ -123,7 +126,8 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
               {
                 "bg-green-400": isShipmentReceived || isOutForDelivery,
                 "bg-main": isCanceled,
-                "bg-yellow-300": isWaitingForCustomerAction,
+                "bg-yellow-300":
+                  isWaitingForCustomerAction || isDeliveredToSender,
               }
             )}
           >
@@ -135,12 +139,14 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
                 isShipmentReceived ||
                 isOutForDelivery ||
                 isCanceled ||
-                isWaitingForCustomerAction,
+                isWaitingForCustomerAction ||
+                isDeliveredToSender,
             })}
           >
             {t("shipment.status.PACKAGE_RECEIVED")}
           </p>
         </div>
+
         <div className=" flex flex-1 gap-x-6 gap-y-5 max-sm:-ms-3 max-sm:items-center md:-me-5 md:flex-col">
           <div
             className={cn(
@@ -149,7 +155,8 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
                 "scale-x-[-1] scale-y-[1]": language === "ar",
                 "bg-green-400": isOutForDelivery,
                 "bg-main": isCanceled,
-                "bg-yellow-300": isWaitingForCustomerAction,
+                "bg-yellow-300":
+                  isWaitingForCustomerAction || isDeliveredToSender,
               }
             )}
           >
@@ -162,7 +169,10 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
             <p
               className={cn("text-md font-bold text-gray-400", {
                 "text-primary":
-                  isOutForDelivery || isCanceled || isWaitingForCustomerAction,
+                  isOutForDelivery ||
+                  isCanceled ||
+                  isWaitingForCustomerAction ||
+                  isDeliveredToSender,
               })}
             >
               {t("shipment.status.OUT_FOR_DELIVERY")}
@@ -170,13 +180,17 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
             <span
               className={cn("text-xs text-gray-400", {
                 "text-main": isCanceled,
-                "text-yellow-300": isWaitingForCustomerAction,
+                "text-yellow-300":
+                  isWaitingForCustomerAction ||
+                  isDeliveredToSender ||
+                  isDeliveredToSender,
               })}
             >
               {reason}
             </span>
           </div>
         </div>
+
         <div className="flex gap-x-6 gap-y-5 max-sm:-ms-3 max-sm:items-center md:flex-col md:items-end">
           <div className="flex h-12 w-12 items-center justify-center rounded-full border bg-white shadow ">
             <SvgIcon name="delivered-box" className="h-7 w-7 text-gray-300" />
@@ -186,81 +200,6 @@ export const ShipmentStatuesComponent = ({ statues, reason }: Props) => {
           </p>
         </div>
       </div>
-      {/* <div className="flex h-1 items-center justify-between bg-gray-200">
-      
-       
-            
-          </div>
-        </div>
-        <div className="relative flex w-1/3 justify-end">
-          <div className="flex h-12 w-12 items-center justify-center rounded-full border bg-white shadow">
-            <SvgIcon name="delivered-box" className="h-7 w-7 text-gray-300" />
-          </div>
-          <p className="text-md absolute top-10 font-bold text-gray-400">
-            {t("shipment.status.DELIVERED")}
-          </p>
-        </div>
-      </div> */}
     </div>
   );
-
-  // return (
-  //   <div className="px-5 py-8 pb-16">
-  //     <div className="flex h-1 items-center justify-between bg-gray-200">
-  //       <div className="relative flex h-1 w-1/3 items-center bg-main">
-  //         <div className="flex h-6 w-6 items-center justify-center rounded-full bg-main shadow">
-  //           <SvgIcon name="check-mark" className="h-5 w-5 text-white" />
-  //         </div>
-  //         <p className="text-md absolute top-10 font-bold text-primary">
-  //           {t("shipment.status.TICKET_CREATED")}
-  //         </p>
-  //       </div>
-  //       <div className="relative flex h-1 w-1/3 items-center justify-between bg-main">
-  //         <div className="-ml-2 flex h-6 w-6 items-center justify-center rounded-full bg-main shadow">
-  //           <SvgIcon name="check-mark" className="h-5 w-5 text-white" />
-  //         </div>
-  //         {/* <p className="text-md absolute -start-1/2 top-10 translate-x-1/2 font-bold text-primary"> */}
-  //         <p
-  //           className={cn(
-  //             "text-md absolute -start-1/2 top-10  font-bold text-primary",
-  //             {
-  //               "-translate-x-1/2": language === "ar",
-  //               "translate-x-1/2": language !== "ar",
-  //             }
-  //           )}
-  //         >
-  //           {t("shipment.status.PACKAGE_RECEIVED")}
-  //         </p>
-  //         <div>
-  //           <div className="flex h-12 w-12 items-center justify-center rounded-full bg-main">
-  //             <SvgIcon
-  //               name="truck-delivery"
-  //               className={cn("h-7 w-7 text-white", {
-  //                 "scale-x-[-1] scale-y-[1]": language === "ar",
-  //               })}
-  //             />
-  //           </div>
-  //           <div
-  //             className={cn("absolute start-1/2 top-10 ", {
-  //               "-translate-x-1/2": language === "ar",
-  //               "translate-x-1/2": language !== "ar",
-  //             })}
-  //           >
-  //             <p className="text-md font-bold text-primary">
-  //               {t("shipment.status.OUT_FOR_DELIVERY")}
-  //             </p>
-  //           </div>
-  //         </div>
-  //       </div>
-  //       <div className="relative flex w-1/3 justify-end">
-  //         <div className="flex h-12 w-12 items-center justify-center rounded-full border bg-white shadow">
-  //           <SvgIcon name="delivered-box" className="h-7 w-7 text-gray-300" />
-  //         </div>
-  //         <p className="text-md absolute top-10 font-bold text-gray-400">
-  //           {t("shipment.status.DELIVERED")}
-  //         </p>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
 };
