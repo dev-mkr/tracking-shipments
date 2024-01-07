@@ -1,17 +1,16 @@
+import { TrackingNumberInput } from "@/shared/TrackingNumberInput";
 import { Menu } from "@headlessui/react";
 
 interface Props {
   buttonText: string;
   buttonClassName?: string;
   dropdownClassName?: string;
-  children: React.ReactNode;
 }
 
 export const HeaderItemWithDropdown = ({
   buttonText,
   buttonClassName,
   dropdownClassName,
-  children,
 }: Props) => {
   return (
     <Menu as="div" className="relative inline-block text-left">
@@ -20,7 +19,13 @@ export const HeaderItemWithDropdown = ({
         <Menu.Items
           className={`peer absolute rounded-md rounded-se-none bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none ${dropdownClassName}`}
         >
-          <div className="px-10 py-8">{children}</div>
+          <Menu.Item>
+            {({ close }) => (
+              <div className="px-10 py-8">
+                <TrackingNumberInput callBack={close} />
+              </div>
+            )}
+          </Menu.Item>
         </Menu.Items>
         <Menu.Button className={buttonClassName}>{buttonText}</Menu.Button>
       </div>
